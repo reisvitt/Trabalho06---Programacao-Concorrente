@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1080.0" style="-fx-background-color: #1c1c1c;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <AnchorPane layoutX="437.0" layoutY="178.0" prefHeight="240.0" prefWidth="229.0" style="-fx-border-color: white; -fx-border-width: 1.5;">
+         <children>
+            <ImageView fx:id="imageViewQuadro" fitHeight="191.0" fitWidth="202.0" layoutX="17.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/equation1.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="27.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quadro" textAlignment="CENTER" wrappingWidth="176.0000029206276">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="437.0" layoutY="13.0" prefHeight="137.0" prefWidth="247.0">
+         <children>
+            <Button fx:id="buttonUpEst" layoutX="143.0" layoutY="54.0" mnemonicParsing="false" onAction="#estUp" styleClass="buttonUp" stylesheets="@../css/styles.css" text="Aumentar" />
+            <Button fx:id="buttonDownEst" layoutX="143.0" layoutY="94.0" mnemonicParsing="false" onAction="#estDown" styleClass="buttonDown" stylesheets="@../css/styles.css" text="Diminuir" />
+            <Button fx:id="buttonUpProf" layoutX="14.0" layoutY="54.0" mnemonicParsing="false" onAction="#profUp" styleClass="buttonUp" stylesheets="@../css/styles.css" text="Aumentar" />
+            <Button fx:id="buttonDownProf" layoutX="14.0" layoutY="94.0" mnemonicParsing="false" onAction="#profDown" styleClass="buttonDown" stylesheets="@../css/styles.css" text="Diminuir" />
+            <Text fill="#dadada" layoutX="44.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prof.">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Text>
+            <Text fill="#dadada" layoutX="168.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estud.">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Text>
+            <Text fill="#ebebeb" layoutX="79.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button layoutX="717.0" layoutY="14.0" mnemonicParsing="false" onMouseEntered="#showHelp" onMouseExited="#closeHelp" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0.5; -fx-border-radius: 5px;" text="Help" textFill="#cdcdcd" />
+      <AnchorPane fx:id="escritor1" layoutX="30.0" layoutY="14.0" prefHeight="130.0" prefWidth="270.0" style="-fx-border-color: green;" styleClass="container" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/einstein.jpg" />
+               </image>
+            </ImageView>
+            <Slider fx:id="sliderEP1" blockIncrement="1.0" layoutX="14.0" layoutY="71.0" max="10.0" min="1.0" onMouseReleased="#sliderEP1" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prod. equação" />
+            <Slider fx:id="sliderEE1" blockIncrement="1.0" layoutX="14.0" layoutY="107.0" max="10.0" min="1.0" onMouseReleased="#sliderEE1" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exibir equação" />
+            <Text fill="#b9b9b9" layoutX="152.0" layoutY="39.0" stroke="#ff8888" strokeType="OUTSIDE" strokeWidth="0.0" text="Einstein" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="escritor2" layoutX="30.0" layoutY="158.0" prefHeight="130.0" prefWidth="270.0" style="-fx-border-color: green;" styleClass="container" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Newton.jpg" />
+               </image>
+            </ImageView>
+            <Slider fx:id="sliderEP2" blockIncrement="1.0" layoutX="14.0" layoutY="71.0" max="10.0" min="1.0" onMouseReleased="#sliderEP2" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prod. equação" />
+            <Slider fx:id="sliderEE2" blockIncrement="1.0" layoutX="14.0" layoutY="107.0" max="10.0" min="1.0" onMouseReleased="#sliderEE2" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exibir equação" />
+            <Text fill="#b9b9b9" layoutX="152.0" layoutY="39.0" stroke="#ff8888" strokeType="OUTSIDE" strokeWidth="0.0" text="Newton" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="escritor3" layoutX="30.0" layoutY="303.0" prefHeight="130.0" prefWidth="270.0" style="-fx-border-color: green;" styleClass="container" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Euclides.jpg" />
+               </image>
+            </ImageView>
+            <Slider fx:id="sliderEP3" blockIncrement="1.0" layoutX="14.0" layoutY="71.0" max="10.0" min="1.0" onMouseReleased="#sliderEP3" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prod. equação" />
+            <Slider fx:id="sliderEE3" blockIncrement="1.0" layoutX="14.0" layoutY="107.0" max="10.0" min="1.0" onMouseReleased="#sliderEE3" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exibir equação" />
+            <Text fill="#b9b9b9" layoutX="150.0" layoutY="41.0" stroke="#ff8888" strokeType="OUTSIDE" strokeWidth="0.0" text="Euclides" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="escritor4" layoutX="30.0" layoutY="451.0" prefHeight="130.0" prefWidth="270.0" style="-fx-border-color: green;" styleClass="container" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Leibniz.jpg" />
+               </image>
+            </ImageView>
+            <Slider fx:id="sliderEP4" blockIncrement="1.0" layoutX="14.0" layoutY="71.0" max="10.0" min="1.0" onMouseReleased="#sliderEP4" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prod. equação" />
+            <Slider fx:id="sliderEE4" blockIncrement="1.0" layoutX="14.0" layoutY="107.0" max="10.0" min="1.0" onMouseReleased="#sliderEE4" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exibir equação" />
+            <Text fill="#b9b9b9" layoutX="151.0" layoutY="42.0" stroke="#ff8888" strokeType="OUTSIDE" strokeWidth="0.0" text="Leibniz" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="escritor5" layoutX="264.0" layoutY="451.0" prefHeight="130.0" prefWidth="270.0" style="-fx-border-color: green;" styleClass="container" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Euler.jpg" />
+               </image>
+            </ImageView>
+            <Slider fx:id="sliderEP5" blockIncrement="1.0" layoutX="14.0" layoutY="71.0" max="10.0" min="1.0" onMouseReleased="#sliderEP5" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prod. equação" />
+            <Slider fx:id="sliderEE5" blockIncrement="1.0" layoutX="14.0" layoutY="107.0" max="10.0" min="1.0" onMouseReleased="#sliderEE5" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exibir equação" />
+            <Text fill="#b9b9b9" layoutX="159.0" layoutY="44.0" stroke="#ff8888" strokeType="OUTSIDE" strokeWidth="0.0" text="Euler" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="leitor1" layoutX="851.0" layoutY="14.0" prefHeight="130.0" prefWidth="270.0" style="-fx-border-color: green;" styleClass="container" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="sliderLP1" blockIncrement="1.0" layoutX="14.0" layoutY="71.0" max="10.0" min="1.0" onMouseReleased="#sliderLP1" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="112.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vizual. equação" />
+            <Slider fx:id="sliderLE1" blockIncrement="1.0" layoutX="14.0" layoutY="107.0" max="10.0" min="1.0" onMouseReleased="#sliderLE1" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abs. equação" />
+         </children>
+      </AnchorPane>
+      <Line fx:id="lineE1" endX="85.70709228515625" endY="118.29287719726562" layoutX="352.0" layoutY="178.0" startX="-107.0" startY="-96.5" style="-fx-stroke: green;" />
+      <Line fx:id="lineE2" endX="102.4141845703125" endY="32.999969482421875" layoutX="336.0" layoutY="264.0" startX="-91.0" startY="-38.5" style="-fx-stroke: green;" />
+      <Line fx:id="lineE3" endX="101.70709228515625" endY="-61.707122802734375" layoutX="336.0" layoutY="358.0" startX="-91.0" startY="5.0" style="-fx-stroke: green;" />
+      <Line fx:id="lineE4" endX="82.70709228515625" endY="-105.70712280273438" layoutX="355.0" layoutY="402.0" startX="-110.0" startY="49.0" style="-fx-stroke: green;" />
+      <Line fx:id="lineE5" endX="-1.0" endY="-124.0" layoutX="438.0" layoutY="421.0" startX="-66.5" startY="30.0" style="-fx-stroke: green;" />
+      <AnchorPane fx:id="leitor2" layoutX="851.0" layoutY="157.0" prefHeight="130.0" prefWidth="270.0" style="-fx-border-color: green;" styleClass="container" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="sliderLP2" blockIncrement="1.0" layoutX="14.0" layoutY="71.0" max="10.0" min="1.0" onMouseReleased="#sliderLP2" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="111.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vizual. equação" />
+            <Slider fx:id="sliderLE2" blockIncrement="1.0" layoutX="14.0" layoutY="107.0" max="10.0" min="1.0" onMouseReleased="#sliderLE2" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abs. equação" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="leitor3" layoutX="851.0" layoutY="300.0" prefHeight="130.0" prefWidth="270.0" style="-fx-border-color: green;" styleClass="container" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="sliderLP3" blockIncrement="1.0" layoutX="14.0" layoutY="71.0" max="10.0" min="1.0" onMouseReleased="#sliderLP3" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="110.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vizual. equação" />
+            <Slider fx:id="sliderLE3" blockIncrement="1.0" layoutX="14.0" layoutY="107.0" max="10.0" min="1.0" onMouseReleased="#sliderLE3" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abs. equação" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="leitor4" layoutX="851.0" layoutY="451.0" prefHeight="130.0" prefWidth="270.0" style="-fx-border-color: green;" styleClass="container" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="sliderLP4" blockIncrement="1.0" layoutX="14.0" layoutY="71.0" max="10.0" min="1.0" onMouseReleased="#sliderLP4" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="113.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vizual. equação" />
+            <Slider fx:id="sliderLE4" blockIncrement="1.0" layoutX="14.0" layoutY="107.0" max="10.0" min="1.0" onMouseReleased="#sliderLE4" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abs. equação" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="leitor5" layoutX="623.0" layoutY="451.0" prefHeight="130.0" prefWidth="270.0" style="-fx-border-color: green;" styleClass="container" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="75.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+            <Slider fx:id="sliderLP5" blockIncrement="1.0" layoutX="14.0" layoutY="71.0" max="10.0" min="1.0" onMouseReleased="#sliderLP5" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="112.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vizual. equação" />
+            <Slider fx:id="sliderLE5" blockIncrement="1.0" layoutX="14.0" layoutY="107.0" max="10.0" min="1.0" onMouseReleased="#sliderLE5" prefHeight="16.0" prefWidth="90.0" value="10.0" />
+            <Text fill="#bfbfbf" layoutX="117.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abs. equação" />
+         </children>
+      </AnchorPane>
+      <Line fx:id="lineL1" endX="120.0" endY="-111.0" layoutX="731.0" layoutY="178.0" startX="-65.0" startY="119.58578491210938" style="-fx-stroke: green;" />
+      <Line fx:id="lineL2" endX="66.0" endY="-74.5" layoutX="785.0" layoutY="299.0" startX="-119.0" style="-fx-stroke: green;" />
+      <Line fx:id="lineL3" endX="33.0" endY="71.5" layoutX="818.0" layoutY="296.0" startX="-152.70709228515625" startY="3.70709228515625" style="-fx-stroke: green;" />
+      <Line fx:id="lineL4" endX="84.0" endY="153.0" layoutX="766.0" layoutY="299.0" startX="-100.0" style="-fx-stroke: green;" />
+      <Line fx:id="lineL5" endX="67.5" endY="40.0" layoutX="663.0" layoutY="411.0" startX="2.29290771484375" startY="-112.70709228515625" style="-fx-stroke: green;" />
+      <AnchorPane fx:id="anchorPaneHelp" layoutX="477.0" layoutY="45.0" opacity="0.95" prefHeight="425.0" prefWidth="532.0" style="-fx-background-color: black; -fx-border-color: green; -fx-background-radius: 5px; -fx-border-radius: 5px;" visible="false">
+         <children>
+            <AnchorPane layoutX="9.0" layoutY="11.0" prefHeight="28.0" prefWidth="382.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1.0">
+               <children>
+                  <Text fill="#f5f5f5" layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professores: Produzem e mostram suas equações." AnchorPane.leftAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="12.0" layoutY="45.0" prefHeight="28.0" prefWidth="382.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estudantes: Vizualizam as equações e absorvem esses conhecimentos." AnchorPane.leftAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="75.0" prefHeight="28.0" prefWidth="382.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lógica: Se um professor estiver escrevendo sua equação, os estudantes não &#10;podem fazer a vizualização. Se um ou mais estudantes estiverem vizualizando &#10;a equação, nenhum professor pode modificar o quadro. Apenas um professor &#10;por vez pode fazer modificações no recurso compartilhado (quadro)." AnchorPane.leftAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="155.0" prefHeight="28.0" prefWidth="382.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="34.0">
+               <children>
+                  <Text fill="#f5f5f5" layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linha verde: Não está usando/solicitando recurso compartilhado (quadro)." AnchorPane.leftAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="192.0" prefHeight="28.0" prefWidth="424.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="34.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linha amarela: Solicitando o recurso compartilhado (quadro)." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="230.0" prefHeight="28.0" prefWidth="424.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linha vermelho: Acessando o recurso compartilhado (quadro)." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="266.0" prefHeight="28.0" prefWidth="424.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="34.0">
+               <children>
+                  <Text fill="WHITE" layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aumentar: Aumenta a quantidade de Professores/Estudantes que podem estar &#10;acessando o recurso compartilhado (quadro)." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="315.0" prefHeight="28.0" prefWidth="424.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="34.0">
+               <children>
+                  <Text fill="WHITE" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diminuir: Diminui a quantidade de Professores/Estudantes que podem estar &#10;acessando o recurso compartilhado (quadro)." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.01708984375" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="13.0" layoutY="336.0" prefHeight="28.0" prefWidth="424.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" layoutX="-10.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slider: Aumenta/Diminui a velocidade de produção/exibição ou &#10;vizualização/absorção do conhecimento." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

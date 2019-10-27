@@ -1,0 +1,23 @@
+.button{
+  -fx-pref-width: 90;
+  -fx-background-color: transparent;
+  -fx-border-radius: 5px;
+  -fx-border-width: 0.5;
+  -fx-text-fill: #cccccc;
+}
+
+.buttonUp{
+  -fx-border-color: green;
+}
+
+.buttonDown{
+  -fx-border-color: red;
+}
+
+.container{
+  -fx-pref-width: 215;
+  -fx-pref-height: 135;
+  -fx-border-radius: 5px;
+  -fx-border-width: 0.5;
+  -fx-border-color: green;
+}
